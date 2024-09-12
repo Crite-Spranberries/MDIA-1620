@@ -5,6 +5,7 @@
 2. Rediscovered markdown syntax (very cool)
 3. Rediscovered 'cd ..' as a command.
 
-- So far so clear, no complaints or confusions.
+- So far slightly unfamiliar with more indepth markdown text.
+- Not much extra questions to be had.
 
-- Currently feeling solid.
+- Savvy.
