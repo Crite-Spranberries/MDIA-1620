@@ -3,7 +3,7 @@
 ***
 Name: Samuel Chua
 ***
-First README log
+## First README log
 1. Relearned the version control convention
 2. Rediscovered markdown syntax (very cool)
 3. Rediscovered 'cd ..' as a command.
@@ -14,7 +14,7 @@ First README log
 I'm feeling "Savvy".
 
 ***
-Second README log
+## Second README log
 1. Recognizing this same issue as I previously did in my CST course.
 2. Being straightforward with github auth actually being the solution..
 3. 'cls' being the clear equivalent to clear on the terminal line.
