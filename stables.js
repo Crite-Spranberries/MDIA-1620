@@ -33,7 +33,7 @@
 
 /*<- - - - - - - - - - - - Lab (Lesson #4) - - - - - - - - - - - - - >*/
 
-const STABLES_FEE = 100;
+const STABLES_FEE = 300;
 let stablesDiscount = .10;
 
 let horseName = "Tennessee Walker";
