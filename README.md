@@ -36,6 +36,9 @@ I'm feeling "exuberant".
 - Feeling confident in conventions covered to this date
 - Feeling confident in playing around with literals.
 
+I like to think about things (weird as it sounds) conceptually like a bunch of 
+marbles being organized into whatever I'm trying to solve. Especially for coding problems.
+
 ***
 Not required, but I'm feeling "contented".
 
