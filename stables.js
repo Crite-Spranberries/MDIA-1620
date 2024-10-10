@@ -59,7 +59,7 @@ if (isHorseInStable == true){
 // Horse = ["name, age, isInside"]
 
 console.log(`\nThe horse array format is: horseName, horseAge, and isHorseInStable. 
-(Their colors are manually pushed into their datasets)! \n`);
+(Their colors are manually pushed into their datasets)!\n`);
 
 let horseOne= [horseName, horseAge, isHorseInStable];
 let horseTwo= ["Cognac", 2, false];
