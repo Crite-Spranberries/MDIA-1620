@@ -43,4 +43,12 @@ Your default horse, "${horseName}", is staying here for 3 months.
 This means you get a complimentary ${stablesDiscount * 100}% discount!
 You will be charged $${STABLES_FEE - (STABLES_FEE * stablesDiscount)}.`;
 
-console.log(stableText);
+/*<- - - - - - - - - - - - Lab (Lesson #4) - - - - - - - - - - - - - >*/
+
+let isHorseInStable = true;
+
+if (isHorseInStable == true){
+    console.log(`"${horseName}" is in a stable. What a comfy horse. \n`, stableText);
+} else if (isHorseInStable == false){
+    console.log(`"${horseName}" is not currently in a stable. Consider trying our 3 month 10% deal!`);
+}
