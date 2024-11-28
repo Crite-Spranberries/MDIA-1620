@@ -1,82 +1,128 @@
-/*<- - - - - - - - - - - - Lesson 2 - - - - - - - - - - - - - >*/
+// Welcome!
+//
+//                                                  #    #
+//                                             %%% ##   ##
+//                                          %%%%% ###%🎀###
+//                                         %%%%% ### %%% #
+//                                       %%%%%% ### %%% ###
+//                                        %%%% ## %% #######
+//                                       %%%%% # %% #@#####
+//                                     %%%%%% # % #########
+//                                    %%%%% ##### #########
+//                          ###        %% ####### #########
+//                 %%% ############    ########### ########
+//              %%%% ############################### #######
+//            %%%%% ################################## ######
+//          %%%%%% #################################### #C###
+//         %%%🌸%% #####################################  ###
+//         %%%%% #######################################
+//        %%%%%% ############### BEANS ##################
+//     % %%%%%%% ############### BEANS ##################
+//      %%%%%%%%% ############## BEANS ##################
+//     %%%%%%%%%% ########################################
+//  %%% %%%%%%%%   ###### ################################
+//    %%%%%%%%      ###### #################### ##########
+// % %%%🌸%%%%        ####### ########### ###### ##########
+//  %%%%%%%%%         #######  ########### ###### ########
+// %%%%%%%%%%          ##### ###  ######### ####### ######
+//  %%%%%%%%%%          #### ##               ####### ####
+//  %🌸%%%%%%%%%           ## #                  ##### ###
+//   %%  %% % %%         # ##                      ## ###
+//     %   %    %        # ###                      # ###
+//                        # ###                     ## ###
+//                        # ###                     ## ###
+//                        # ####                   #### ##
+//                       ### ###                  ##### ###
+//                      ####  ###                 ####   ##
+//                     #####   ###                 ##    ##
+//                    #####    ####                      ###
+//                     ##        ###                     ###
+//                                ####                     ##
+//                                 ####                    ###
+//                                                         ####
+//                                                          ##
+//
+// This is a template for the final project. You'll be setting up a stable and making
+// sure it runs smoothly.
+//
+// You can copy and paste this into your stables.js file, and then use it to guide you.
+// Please do not create a new file!
+// Feel free to keep the headings (e.g.: "Variables"), but please delete any boilerplate
+// comments. (Your own comments, where necessary, are acceptable.)
+//
+// NOTE: UNLESS SPECIFIED, VARIABLE NAMING IS UP TO YOU. THERE SHOULD BE NO HARD-CODED
+// NUMBERS OR STRINGS WHERE VARIBALES WOULD BE PREFERRED.
 
-// console.log("Horses are great!");
+//------------------------- Seting up shop -------------------------//
 
-// // Initializations
-// let horseName = "Coolguy";
-// horseName = "Tennessee Walker";
-// let horseAge = 5;
+// Initialize a variable called "horses" that will store the horses in your stable.
+// Create a variable and use it to store a message visitors to the stable.
+// Create a variable and use it to store the cost of a late payment fee.
+// Create a variable and use it to store the number of available stalls in the stable.
 
-// // Stable status
-// let isHorseInStable = true;
-// isHorseInStable = false;
+//------------------------- First day -------------------------//
 
-// // Print
-// console.log(horseName, horseAge, isHorseInStable);
+// Using a constructor, add at least 3 horses to your stables.
+//
+// The horse should have the following properties:
+// - name, nickname, favorite treat (string)
+// - age, monthly rent (number)
+// - location (boolean inside/outside)
+// - two unique properties of your choice (use any primitive)
+// - a method that introduces your horse and references at least 3 object properties.
+// - a second, unique method of your choice
 
-/*<- - - - - - - - - - - - Lesson 3 - - - - - - - - - - - - - >*/
+// Store the horses you've just created in your "horses" variable.
 
-// console.log(typeof 999);
-// console.log(typeof "890");
-// console.log(typeof true);
-// console.log(typeof horseAge);
+// Fancy! Another horse wants to be stabled! Create a variable that stores an object
+// literal of your new horse, and add it to your "horses" variable.
 
-// const STABLE_MONTHLY_FEE = 500;
-// console.log(STABLE_MONTHLY_FEE);
-// console.log(STABLE_MONTHLY_FEE - 50);
-// console.log(STABLE_MONTHLY_FEE *.10);
+// Initialize new property to your horses: a boolean that allows you to check if your horse
+// is hungry or not. Use dot/bracket notation.
 
-// let owner = "Arthur Morgan";
-// let horse = "Tenn Walker";
-// let stableIntro = `This stable costs $${STABLE_MONTHLY_FEE} for ${owner}'s "${horse}".`
-// console.log(stableIntro);
+//------------------------- Stable roster -------------------------//
 
-/*<- - - - - - - - - - - - Lab (Lesson #4) - - - - - - - - - - - - - >*/
+// We want to keep track of our horses and how they are doing. Paste the data structure
+// of our horse variable below so we can reference it. It is okay to comment it out.
 
-const STABLES_FEE = 300;
-let stablesDiscount = .10;
+//---------------------- Growing business ----------------------//
 
-let horseName = "Tennessee Walker";
-let horseAge = 5;
+// We've added some horses! Re-assign the variable that contains the number of available stalls.
+// Use the math operator to determine how many stables you should have left, given the number of
+// horses you've added.
 
-let stableText = `Welcome to our stables, Wende Li! Our stable fee is $${100}. 
-Your default horse, "${horseName}", is staying here for 3 months. 
-This means you get a complimentary ${stablesDiscount * 100}% discount!
-You will be charged $${STABLES_FEE - (STABLES_FEE * stablesDiscount)}.`;
+// Express the following in code: If the variable that contains your remaining stalls
+// is less than 2, log out "We need to build more stalls", otherwise log out "We have
+// [number of stalls] available!"
 
-/*<- - - - - - - - - - - - Lab (Lesson #5 - Uses Lesson(s) #4) - - - - - - - - - - - - - >*/
+// Create a function that logs out how much will an individual horse will owe if rent is
+// paid late. Invoke the function.
 
-let isHorseInStable = true;
+// Add loop that checks to find out if a certain horse likes a treat. If the horse does not like
+// the treat, log out their disatisfaction and check the next horse. Exit the loop when you find
+// the horse that likes the treat.
 
-if (isHorseInStable == true){
-    console.log(`"${horseName}" is in a stable. What a comfy horse. \n`, stableText);
-} else if (isHorseInStable == false){
-    console.log(`"${horseName}" is not currently in a stable. Consider trying our 3 month 10% deal!`);
-}
+// Create and invoke a function that returns (not logs) the nickname of a chosen horse. Log out
+// the return value outside of the function.
 
-/*<- - - - - - - - - - - - Lab (Lesson #6 - Uses Lesson(s) 4, 5) - - - - - - - - - - - - - >*/
+//------------------------- Day to day operations -------------------------//
 
-// Horse = ["name, age, isInside"]
+// Create and invoke a function references one of your unique horse properties. It should
+// contain a conditional or a loop.
 
-console.log(`\nThe horse array format is: horseName, horseAge, and isHorseInStable. 
-(Their colors are manually pushed into their datasets)!\n`);
+// Morning! Create and invoke a function that moves all your horses outside. It should
+// log out statement indicating the horses have been moved to spend time in the sun.
 
-let horseOne= [horseName, horseAge, isHorseInStable];
-let horseTwo= ["Cognac", 2, false];
-let horseThree= ["Cocoa ", 7, true];
+// Initialize a method on your horses that moves them inside if they are outside, and
+// vice versa.
 
-horseOne.push("Tamarind");
-horseTwo.push("Maroon");
-horseThree.push("Oak Brown");
+// Food! Create and invoke a function that feeds your horses. If the horse is outside, it
+// should call them in, and then all horses should be fed a treat. Log the activity of
+// the horses.
 
-console.log("Current horses: \n", 
-    "\n", horseOne, 
-    "\n", horseTwo, 
-    "\n", horseThree);
+// Bedtime! Update the function that lets your horses outside so that it also calls them
+// in if it is getting dark. Only the horses that moved should log out a message. Invoke the function.
 
-console.log(`"${horseOne[0]}"'s color is ${horseOne[3]}.`);
+//------------------------- Bonus -------------------------//
 
-console.log(`\nQuick inspection! Checking for if a horse is in a stable or not. 
-Today's inspected horse is ${horseTwo[0]}, the "${horseTwo[3]}" colored horse. 
-Their description of being in a stable is "${horseTwo[2]}"!`);
-
+// Replace the ascii art at the top of the file with art representing your stable.
