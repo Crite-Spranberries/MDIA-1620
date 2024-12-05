@@ -91,6 +91,7 @@ horses.push(horse1, horse2, horse3);
 /** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 // Object literal initialization + Push
+
 const horse4 = {
     name:             "Sven",
     nickname:         "Seven",
@@ -166,6 +167,7 @@ console.log(`The status for ${horses[0].name}'s isHungry is: ${horses[0].isHungr
 
 /** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+// Grabs a specific horse and checks how much they'd hypothetically owe if they're late in fees (monthly rent + late payment fee)
 function hasLateRent(checkHorse){
     console.log(`${horses[checkHorse].name} currently owes $${LATE_PAYMENT_FEE + horses[checkHorse].monthlyRent} in late rent fees!`);
 }
@@ -228,9 +230,14 @@ moveHorses();
 function feedHorses(){
     console.log("It's time to eat!");
     for (let i =0; i < horses.length; i++){
+        if(horses[i].isInside == false){
+            horses[i].isInside = true;
+            console.log(`${horses[i].name} has been sent inside to grab some food!`);
+        } else console.log(`${horses[i].name} is already in their stables.`);
+
         if(horses[i].isHungry == true){
             horses[i].isHungry = false;
-            console.log(`${horses[i].name} has been called to eat some grub. Yummy.`);
+            console.log(`${horses[i].name} has been fed some grub. Yummy.`);           
         } else console.log(`${horses[i].name} is already feeling pretty well fed!`);
     }
 }
