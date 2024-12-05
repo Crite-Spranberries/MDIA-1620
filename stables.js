@@ -22,7 +22,7 @@
 
 // Initialization for general variables
 let horses = [];
-let visitorsMsg = "";
+let visitorsMsg = "Hello, welcome to this very cool stable, yes.";
 const LATE_PAYMENT_FEE = 10; 
 const NUM_MAX_STALLS = 5;
 let curAvailStalls; 
@@ -152,6 +152,16 @@ checkStalls();
 //     monthlyRent:      7,
 //     isInside:         false,
 // }
+
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+// Unique function to check if a chosen horse is an Arabian Horse
+function arabianChecker(inputHorse){
+    if (inputHorse.breed === "Arabian Horse"){
+        console.log("Oh yeah, we're looking at quite a fast Arabian Horse here.");
+    } else console.log("Wait, this isn't an Arabian Horse :(");
+}
+arabianChecker(horses[0]);
 
 /** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
