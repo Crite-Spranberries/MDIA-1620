@@ -1,128 +1,241 @@
-// Welcome!
+    //       ,//)
+    //     ,;;' \
+    //   ,;;' ( '\
+    //       / '\_)      Tenn
+         
+    //       ,//)
+    //     ,;;' \
+    //   ,;;' ( '\
+    //       / '\_|      Wumpy
+     
+    //       ,//)
+    //     ,;;' \
+    //   ,;;' ( '\,
+    //       / '\_/      Soup
+
+    //       ,//)
+    //     ,;;' \
+    //   ,;;' ( '\,
+    //       / '\_}      Seven
+
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+// Initialization for general variables
+let horses = [];
+let visitorsMsg = "";
+const LATE_PAYMENT_FEE = 10; 
+const NUM_MAX_STALLS = 5;
+let curAvailStalls; 
+let horseIndex;
+
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+// Function to check for available stalls at any time in the code below.
+function checkStalls(){
+curAvailStalls = NUM_MAX_STALLS - horses.length;
+if (curAvailStalls >= 3){
+    console.log(`We have ${curAvailStalls} stalls available!`);
+} else if(curAvailStalls <= 2){
+    console.log(`We need to build more stalls. ${curAvailStalls} stall(s) currently available..`);
+}
+}
+checkStalls();
+
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+// Constructor for horses.
+function Horse(name, nickname, breed, handler, favTreat, age, monthlyRent, isInside){
+    this.name                = name;
+    this.nickname            = nickname;
+    this.breed               = breed;
+    this.handler             = handler;
+    this.favTreat            = favTreat;
+    this.age                 = age;
+    this.monthlyRent         = monthlyRent;
+    this.isInside            = isInside;
+
+    // Logs horse intro
+    this.introduction        = function sayIntro(){
+        console.log(`This horse's name is ${this.name}. ${this.name} is ${this.age} years old, and ${this.owner} is their handler!`);
+    };
+
+    // Logs some fun facts about this horse!
+    this.funFacts            = function sayFacts(){
+        console.log(`FUN FACT: This horse likes to eat ${this.favTreat}. Their nickname is ${this.nickname}, and they are a(n) ${this.breed}.`);
+    }
+
+    // Function to make this horse go inside or outside when called.
+    this.sendHorseOutOrIn      = function outOrIn(){
+        console.log(`${this.name}'s isInside value is currently: ${this.isInside}.`);
+        if (this.isInside == true){
+            this.isInside = false;
+            console.log(`${this.name} has been sent outside.`);
+        } else {
+            this.isInside = true;
+            console.log(`${this.name} has been sent inside.`);
+    }
+
+    }
+}
+
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+// Horse Object initializations + Push
+// name, nickname, breed, handler, favTreat, age, monthlyRent, isInside
+
+const horse1 = new Horse("Walker", "Tenn", "Tennessee Walking Horse", "John", "Apples", 18, 15, true);
+const horse2 = new Horse("Wumpus", "Wumpy","Arabian Horse", "Huey", "Biscuits", 4, 5, false);
+const horse3 = new Horse("Campbell", "Soup","Thoroughbred Horse", "Boyde", "Carrots", 21, 15, true);
+horses.push(horse1, horse2, horse3);
+
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+// Object literal initialization + Push
+const horse4 = {
+    name:             "Sven",
+    nickname:         "Seven",
+    breed:            "Arabian Horse",
+    handler:          "Gareth",
+    favTreat:         "Potatoes",
+    age:              7,
+    monthlyRent:      7,
+    isInside:         false,
+}
+horses.push(horse4);
+checkStalls();
+
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+
+// All horses so far!
 //
-//                                                  #    #
-//                                             %%% ##   ##
-//                                          %%%%% ###%🎀###
-//                                         %%%%% ### %%% #
-//                                       %%%%%% ### %%% ###
-//                                        %%%% ## %% #######
-//                                       %%%%% # %% #@#####
-//                                     %%%%%% # % #########
-//                                    %%%%% ##### #########
-//                          ###        %% ####### #########
-//                 %%% ############    ########### ########
-//              %%%% ############################### #######
-//            %%%%% ################################## ######
-//          %%%%%% #################################### #C###
-//         %%%🌸%% #####################################  ###
-//         %%%%% #######################################
-//        %%%%%% ############### BEANS ##################
-//     % %%%%%%% ############### BEANS ##################
-//      %%%%%%%%% ############## BEANS ##################
-//     %%%%%%%%%% ########################################
-//  %%% %%%%%%%%   ###### ################################
-//    %%%%%%%%      ###### #################### ##########
-// % %%%🌸%%%%        ####### ########### ###### ##########
-//  %%%%%%%%%         #######  ########### ###### ########
-// %%%%%%%%%%          ##### ###  ######### ####### ######
-//  %%%%%%%%%%          #### ##               ####### ####
-//  %🌸%%%%%%%%%           ## #                  ##### ###
-//   %%  %% % %%         # ##                      ## ###
-//     %   %    %        # ###                      # ###
-//                        # ###                     ## ###
-//                        # ###                     ## ###
-//                        # ####                   #### ##
-//                       ### ###                  ##### ###
-//                      ####  ###                 ####   ##
-//                     #####   ###                 ##    ##
-//                    #####    ####                      ###
-//                     ##        ###                     ###
-//                                ####                     ##
-//                                 ####                    ###
-//                                                         ####
-//                                                          ##
-//
-// This is a template for the final project. You'll be setting up a stable and making
-// sure it runs smoothly.
-//
-// You can copy and paste this into your stables.js file, and then use it to guide you.
-// Please do not create a new file!
-// Feel free to keep the headings (e.g.: "Variables"), but please delete any boilerplate
-// comments. (Your own comments, where necessary, are acceptable.)
-//
-// NOTE: UNLESS SPECIFIED, VARIABLE NAMING IS UP TO YOU. THERE SHOULD BE NO HARD-CODED
-// NUMBERS OR STRINGS WHERE VARIBALES WOULD BE PREFERRED.
+// const horse1 = {
+//     name:             "Walker",
+//     nickname:         "Tenn",
+//     breed:            "Tennessee Walking Horse",
+//     handler:          "John",
+//     favTreat:         "Apples",
+//     age:              18,
+//     monthlyRent:      15,
+//     isInside:         true,
+// }
 
-//------------------------- Seting up shop -------------------------//
+// const horse2 = {
+//     name:             "Wumpus",
+//     nickname:         "Wumpy",
+//     breed:            "Arabian Horse",
+//     handler:          "Huey",
+//     favTreat:         "Biscuits",
+//     age:              4,
+//     monthlyRent:      5,
+//     isInside:         false,
+// }
 
-// Initialize a variable called "horses" that will store the horses in your stable.
-// Create a variable and use it to store a message visitors to the stable.
-// Create a variable and use it to store the cost of a late payment fee.
-// Create a variable and use it to store the number of available stalls in the stable.
+// const horse3 = {
+//     name:             "Campbell",
+//     nickname:         "Soup",
+//     breed:            "Thoroughbred Horse",
+//     handler:          "Boyde",
+//     favTreat:         "Carrots",
+//     age:              21,
+//     monthlyRent:      15,
+//     isInside:         true,
+// }
 
-//------------------------- First day -------------------------//
+// const horse4 = {
+//     name:             "Sven",
+//     nickname:         "Seven",
+//     breed:            "Arabian Horse",
+//     handler:          "Gareth",
+//     favTreat:         "Potatoes",
+//     age:              7,
+//     monthlyRent:      7,
+//     isInside:         false,
+// }
 
-// Using a constructor, add at least 3 horses to your stables.
-//
-// The horse should have the following properties:
-// - name, nickname, favorite treat (string)
-// - age, monthly rent (number)
-// - location (boolean inside/outside)
-// - two unique properties of your choice (use any primitive)
-// - a method that introduces your horse and references at least 3 object properties.
-// - a second, unique method of your choice
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-// Store the horses you've just created in your "horses" variable.
+// Loop to add the isHungry property (true) to horses array + checks a horse for their hunger.
+function addHunger(){
+    for (let i =0; i< horses.length; i++){
+        horses[i].isHungry = true;
+        console.log(`Added a true isHungry property to ${horses[i].name}!`);
+    }
+}
+addHunger();
+console.log(`The status for ${horses[0].name}'s isHungry is: ${horses[0].isHungry}`);
 
-// Fancy! Another horse wants to be stabled! Create a variable that stores an object
-// literal of your new horse, and add it to your "horses" variable.
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-// Initialize new property to your horses: a boolean that allows you to check if your horse
-// is hungry or not. Use dot/bracket notation.
+function hasLateRent(checkHorse){
+    console.log(`${horses[checkHorse].name} currently owes $${LATE_PAYMENT_FEE + horses[checkHorse].monthlyRent} in late rent fees!`);
+}
 
-//------------------------- Stable roster -------------------------//
+hasLateRent(2);
 
-// We want to keep track of our horses and how they are doing. Paste the data structure
-// of our horse variable below so we can reference it. It is okay to comment it out.
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-//---------------------- Growing business ----------------------//
+function likesBiscuits(){
+    console.log(`I wonder if these horses like biscuits..`);
+for (let i = 0; i < horses.length; i++){
+        if (horses[i].favTreat === "Biscuits"){
+            console.log(`${horses[i].name} likes biscuits as a treat!`);
+            break;
+        } else if(horses[i].favTreat !== "Biscuits"){
+            console.log(`${horses[i].name} doesn't like biscuits as a treat.`);
+    }
+}
+}
+likesBiscuits();
 
-// We've added some horses! Re-assign the variable that contains the number of available stalls.
-// Use the math operator to determine how many stables you should have left, given the number of
-// horses you've added.
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-// Express the following in code: If the variable that contains your remaining stalls
-// is less than 2, log out "We need to build more stalls", otherwise log out "We have
-// [number of stalls] available!"
+// Logs the return of a horse nickname via function
+function nicknameLogger(inputHorse){
+    return inputHorse.nickname;
+}
+console.log(`To confirm the nicknameLogger function call, the nickname for ${horses[0].name} is ${nicknameLogger(horses[0])}.`);
 
-// Create a function that logs out how much will an individual horse will owe if rent is
-// paid late. Invoke the function.
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-// Add loop that checks to find out if a certain horse likes a treat. If the horse does not like
-// the treat, log out their disatisfaction and check the next horse. Exit the loop when you find
-// the horse that likes the treat.
+// Test out the individual function call to move horses outside or inside.
+horses[0].sendHorseOutOrIn();
+horses[0].sendHorseOutOrIn();
 
-// Create and invoke a function that returns (not logs) the nickname of a chosen horse. Log out
-// the return value outside of the function.
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-//------------------------- Day to day operations -------------------------//
+// Moves horses outside automatically, then sends them inside immediately after to simulate a day/night cycle. 
+function moveHorses(){
+    console.log("It's sunny outside!");
+    for (let i =0; i < horses.length; i++){
+        if(horses[i].isInside == true){
+            horses[i].isInside = false;
+            console.log(`${horses[i].name} has been sent outside to spend time in the sun!`);
+        } else console.log(`${horses[i].name} is already frolicking in the fields.`);
+    }
 
-// Create and invoke a function references one of your unique horse properties. It should
-// contain a conditional or a loop.
+    console.log("It's getting dark..");
+    for (let i =0; i < horses.length; i++){
+        if(horses[i].isInside == false){
+            horses[i].isInside = true;
+            console.log(`${horses[i].name} has been sent inside to get ready for bed.`);
+        } else console.log(`${horses[i].name} is already cozy in their stables.`);
+    }
+}
+moveHorses();
 
-// Morning! Create and invoke a function that moves all your horses outside. It should
-// log out statement indicating the horses have been moved to spend time in the sun.
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-// Initialize a method on your horses that moves them inside if they are outside, and
-// vice versa.
+function feedHorses(){
+    console.log("It's time to eat!");
+    for (let i =0; i < horses.length; i++){
+        if(horses[i].isHungry == true){
+            horses[i].isHungry = false;
+            console.log(`${horses[i].name} has been called to eat some grub. Yummy.`);
+        } else console.log(`${horses[i].name} is already feeling pretty well fed!`);
+    }
+}
+feedHorses();
 
-// Food! Create and invoke a function that feeds your horses. If the horse is outside, it
-// should call them in, and then all horses should be fed a treat. Log the activity of
-// the horses.
+/** - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - SECTION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-// Bedtime! Update the function that lets your horses outside so that it also calls them
-// in if it is getting dark. Only the horses that moved should log out a message. Invoke the function.
-
-//------------------------- Bonus -------------------------//
-
-// Replace the ascii art at the top of the file with art representing your stable.
+// Space to call any of the functions!
