@@ -26,6 +26,22 @@ I'm feeling "Savvy".
 ***
 I'm feeling "exuberant".
 
+## Third README log
+1. Only slightly confused with jumping around branches that need to merge with eachother, but this is more just practice as I've experienced it before.
+2. N/A
+3. N/A
+
+***
+- Feeling confident in conditionals
+- Feeling confident in conventions covered to this date
+- Feeling confident in playing around with literals.
+
+I like to think about things (weird as it sounds) conceptually like a bunch of 
+marbles being organized into whatever I'm trying to solve. Especially for coding problems.
+
+***
+Not required, but I'm feeling "contented".
+
 ***
 Cool Sandwich:  
 ![image](https://github.com/user-attachments/assets/79ff5d81-4872-4a2c-b7b6-660ce94e9dd8)
